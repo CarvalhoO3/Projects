@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <!DOCTYPE html>
+<html>
+<head>
+    <title>Calculadora Simples</title>
+    <style>
+        input[type="button"] {
+            width: 120px;
+            height: 150px;
+            font-size: 20px;
+            background-color : gray;
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <tr>
+            <td colspan="4">
+                <input type="text" id="resultado"  readonly>
+            </td>
+        </tr>
+        <tr>
+            <td><input type="button" value="7" onclick="adicionarNumero('7')"></td>
+            <td><input type="button" value="8" onclick="adicionarNumero('8')"></td>
+            <td><input type="button" value="9" onclick="adicionarNumero('9')"></td>
+            <td><input type="button" value="/" onclick="adicionarOperador('/')"></td>
+        </tr>
+        <tr>
+            <td><input type="button" value="4" onclick="adicionarNumero('4')"></td>
+            <td><input type="button" value="5" onclick="adicionarNumero('5')"></td>
+            <td><input type="button" value="6" onclick="adicionarNumero('6')"></td>
+            <td><input type="button" value="*" onclick="adicionarOperador('*')"></td>
+        </tr>
+        <tr>
+            <td><input type="button" value="1" onclick="adicionarNumero('1')"></td>
+            <td><input type="button" value="2" onclick="adicionarNumero('2')"></td>
+            <td><input type="button" value="3" onclick="adicionarNumero('3')"></td>
+            <td><input type="button" value="-" onclick="adicionarOperador('-')"></td>
+        </tr>
+        <tr>
+            <td><input type="button" value="0" onclick ="adicionarNumero('0')"></td>
+            <td><input type="button" value="C" onclick ="limpar()"></td>
+            <td><input type="button" value="=" onclick ="calcular()"></td>
+            <td><input type="button" value="+" onclick ="adicionarOperador('+')"></td>
+        </tr>
+    </table>
+
+    <script>
+        function adicionarNumero(numero) {
+            document.getElementById("resultado").value += numero;
+        }
+
+        function adicionarOperador(operador) {
+            document.getElementById("resultado").value += operador;
+        }
+
+        function limpar() {
+            document.getElementById("resultado").value = "";
+        }
+
+        function calcular() {
+            var resultado = eval(document.getElementById("resultado").value);
+            document.getElementById("resultado").value = resultado;
+        }
+    </script>
+</body>
+</html>
+
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width , initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
